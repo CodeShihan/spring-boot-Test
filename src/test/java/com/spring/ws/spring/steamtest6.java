@@ -1,7 +1,5 @@
 package com.spring.ws.spring;
 
-import net.minidev.json.JSONUtil;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
@@ -51,7 +49,7 @@ public class steamtest6 {
 //        //5.  将两个队伍合并为一个队伍；
 //        //6. 根据姓名创建 Person 对象；
 //        //7. 打印整个队伍的Person对象信息。
-        Stream.concat(oneStream,twoStream).map(Person::new).forEach(System.out::println);
+//        Stream.concat(oneStream,twoStream).map((String t) -> new Person(t)).forEach(System.out::println);
 //
 
 

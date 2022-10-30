@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GenerateController {
 
-    @Autowired
-    private FiledGenerate filedGenerate;
-
-    @RequestMapping(value = "/generate",method = RequestMethod.GET)
-    @ApiOperation("生成实体类")
-    private String generate() throws Exception {
-        filedGenerate.generate();
-        return "生成成功";
-    }
+//    @Autowired
+//    private FiledGenerate filedGenerate;
+//
+//    @RequestMapping(value = "/generate",method = RequestMethod.GET)
+//    @ApiOperation("生成实体类")
+//    private String generate() throws Exception {
+//        filedGenerate.generate();
+//        return "生成成功";
+//    }
 }

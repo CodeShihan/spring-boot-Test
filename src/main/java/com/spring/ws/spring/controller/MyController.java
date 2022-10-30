@@ -67,22 +67,6 @@ public class MyController {
         return "生成成功";
     }
 
-    public static void main(String[] args) {
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @RequestMapping(value = "/t5",method = RequestMethod.GET)
     @ApiOperation("t")
