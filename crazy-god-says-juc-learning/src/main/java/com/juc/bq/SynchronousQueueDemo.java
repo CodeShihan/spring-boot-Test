@@ -1,3 +1,4 @@
+package com.juc.bq;
 
 import java.sql.Time;
 import java.util.concurrent.BlockingQueue;
