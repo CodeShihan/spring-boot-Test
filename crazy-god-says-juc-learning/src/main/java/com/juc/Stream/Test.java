@@ -31,6 +31,8 @@ public class Test {
 //        Optional<User> maxAageUser = list.stream().max(Comparator.comparing(User::getAge));
 //        maxAageUser.ifPresent(user -> System.out.println("max age user"+user));
 
+         long count = list.stream().filter(user -> user.getAge()>18).count();
+         System.out.println("大于18岁的用户："+count);
 //        System.out.println(userMap);
 //        List<User> list2 = list.stream().sorted(Comparator.comparing(User::getAge)).collect(Collectors.toList());
 //                .filter(u->{return u.getId()%2==0;})
