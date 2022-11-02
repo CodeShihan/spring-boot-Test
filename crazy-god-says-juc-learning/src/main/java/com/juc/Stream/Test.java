@@ -2,6 +2,9 @@ package com.juc.Stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 题目要求：一分钟内完成此题，只能用一行代码实现！
@@ -21,15 +24,24 @@ public class Test {
         User u5 = new User(6,"e",25);
         // 集合就是存储
         List<User> list = Arrays.asList(u1, u2, u3, u4, u5);
+        Map<String, User> userMap = list.stream().collect(Collectors.toMap(User::getName, user -> user,(k1, k2)->k1));
+        userMap.values().forEach(System.out::println);
+//        list.stream()
+//                .filter(u->{return u.getId()%2==0;})
+//                .filter(u->{return u.getAge()>23;})
+//                .map(u->{return u.getName().toUpperCase();})
+//                .sorted((uu1,uu2)->{return uu2.compareTo(uu1);})
+//                .limit(1)
+//                .forEach(System.out::println);
 
-        // 计算交给Stream流
-        // lambda表达式、链式编程、函数式接口、Stream流式计算
-        list.stream()
-                .filter(u->{return u.getId()%2==0;})
-                .filter(u->{return u.getAge()>23;})
-                .map(u->{return u.getName().toUpperCase();})
-                .sorted((uu1,uu2)->{return uu2.compareTo(uu1);})
-                .limit(1)
-                .forEach(System.out::println);
+//        int sun = Stream.of(1,2,3).reduce(0,(a,b)->(a+b));
+//        System.out.println(sun);
+//        List<String> list =  Arrays.asList("jay","tianluo");
+//        // 转化为大写
+//        List<String> upperCaselist = list.stream().map(String::toUpperCase).collect(Collectors.toList());
+//        upperCaselist.forEach(System.out::println);
+//        Stream<String> stream = Stream.of("A","B","C","D");
+//        boolean match = stream.allMatch(s -> s.contains("c"));
+//        System.out.println(match);
     }
 }
