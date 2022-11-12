@@ -1,5 +1,7 @@
 package com.demo.entity;
 
+import lombok.Data;
+
 /**
  * <Description> <br>
  *
@@ -7,5 +9,6 @@ package com.demo.entity;
  * @version 1.0<br>
  * @date 2022/10/30 <br>
  */
+@Data
 public class UserInfoParam {
 }
